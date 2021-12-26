@@ -1,24 +1,47 @@
-# README
+How To Host Website On Heroku
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Install Heroku in Ubunto 
 
-Things you may want to cover:
+    sudo snap install --classic heroku
 
-* Ruby version
+2. check version 
+    heroku --version
 
-* System dependencies
+3. Login 
+    heroku login
 
-* Configuration
+4. create 
+    heroku create
 
-* Database creation
+5. Rename App 
+    heroku rename ror-friends-app
 
-* Database initialization
+    https://ror-friends-app.herokuapp.com/
 
-* How to run the test suite
+6. Add ssh key
+    heroku keys:add
 
-* Services (job queues, cache servers, search engines, etc.)
+7. Database for Production and developemnt 
 
-* Deployment instructions
+    add  sqlite in developmment
+      gem 'sqlite3', '~> 1.4'
 
-* ...
+    add pg for production 
+
+        group :production do
+            gem 'pg', '~> 1.2', '>= 1.2.3'
+            #gem 'rails_12factor', '0.0.2'
+        end
+
+    Install bundle now
+        bundle install --without production 
+
+8. Now push fresh code on github 
+
+git add .
+git commit -m "add pg to production"
+git push 
+
+
+
+
