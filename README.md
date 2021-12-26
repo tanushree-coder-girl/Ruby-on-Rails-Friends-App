@@ -42,6 +42,18 @@ git add .
 git commit -m "add pg to production"
 git push 
 
+9. Now Add on Heroku 
 
+git push heroku main
+heroku run rails db:migrate 
+
+
+Congrats...
+Your App is live now ....
+You Can look At this on This domain... 
+
+https://ror-friends-app.herokuapp.com/
+
+================================= Enjoy Coding =================================
 
 
